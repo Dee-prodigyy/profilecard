@@ -13,8 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Reduced padding for tighter fit on desktop */
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 main {
@@ -36,27 +35,23 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Reduced padding for more compact layout */
-  padding: 1.5rem;
+  padding: 2rem;
+  /* Removed gradient background for cleaner look */
   background: white;
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  /* Adjusted avatar size for better proportions */
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  /* Removed border for cleaner look matching reference */
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transform: translateZ(0); /* forces GPU rendering for sharper edges */
-  backface-visibility: hidden;
 }
 
-
 .profile-content {
-  /* Reduced padding for more compact layout */
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 header {
@@ -65,7 +60,7 @@ header {
 
 .user-name {
   /* Adjusted font size for better hierarchy */
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1a202c;
   margin-bottom: 0.5rem;
@@ -89,14 +84,12 @@ header {
 .user-bio {
   font-size: 0.9375rem;
   color: #4a5568;
-  /* Reduced margin for more compact layout */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .social-links {
-  /* Reduced margin for more compact layout */
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .social-links ul {
@@ -147,17 +140,16 @@ header {
   display: grid;
   /* Changed to 2 columns for side-by-side layout on all screens */
   grid-template-columns: 1fr 1fr;
-  /* Reduced gap for more compact layout */
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .hobbies h3,
 .dislikes h3 {
   /* Updated font styling to match reference */
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #2d3748;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .hobbies ul,
@@ -165,21 +157,19 @@ header {
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* Reduced gap for more compact layout */
-  gap: 0.375rem;
+  gap: 0.5rem;
 }
 
 /* Updated list item styling to match reference with background and border-left */
 .hobbies li,
 .dislikes li {
-  padding: 0.375rem 0.625rem;
+  padding: 0.5rem 0.75rem;
   background: #f7fafc;
   border-radius: 0.375rem;
   color: #4a5568;
   border-left: 3px solid #667eea;
   position: relative;
-  /* Reduced font size for more compact layout */
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 /* Removed bullet points */
@@ -205,26 +195,20 @@ header {
     flex-direction: row;
   }
 
-  .main {
-    max-width: 900px;
-  }
   .avatar-container {
     flex-shrink: 0;
-    /* Reduced width for more compact layout */
-    width: 220px;
-    padding: 1.5rem;
+    width: 280px;
+    padding: 2.5rem 2rem;
   }
 
   .avatar {
-    /* Reduced avatar size for desktop */
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
   }
 
   .profile-content {
     flex: 1;
-    /* Reduced padding for more compact layout */
-    padding: 1.5rem;
+    padding: 2.5rem;
   }
 
   /* Removed display: none to show interests on all screens */
@@ -235,8 +219,7 @@ header {
 
 @media (min-width: 1024px) {
   .user-name {
-    /* Adjusted font size for better fit */
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .user-bio {
