@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  /* Updated background to match reference gradient */
+  background: linear-gradient(135deg, #a8d5e2 0%, #e8c5d8 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Reduced padding for tighter fit on desktop */
+  padding: 0.5rem;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 1.5rem;
+  /* Updated shadow to be more subtle like reference */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Reduced padding for more compact layout */
+  padding: 1.5rem;
+  background: white;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0); /* forces GPU rendering for sharper edges */
+  backface-visibility: hidden;
+}
+
+
+.profile-content {
+  /* Reduced padding for more compact layout */
+  padding: 1.5rem;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  /* Adjusted font size for better hierarchy */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+/* Added time label styling */
+.time-label {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.current-time {
+  display: inline;
+  font-size: 0.875rem;
+  color: #1a202c;
+  font-family: "Courier New", monospace;
+  font-weight: 500;
+}
+
+.user-bio {
+  font-size: 0.9375rem;
+  color: #4a5568;
+  /* Reduced margin for more compact layout */
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.social-links {
+  /* Reduced margin for more compact layout */
+  margin-bottom: 1.5rem;
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Updated social link styling to match reference with circular buttons */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #1da1f2;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.social-twitter {
+  background: #1da1f2;
+}
+
+.social-linkedin {
+  background: #0077b5;
+}
+
+.social-github {
+  background: #333;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.interests {
+  display: grid;
+  /* Changed to 2 columns for side-by-side layout on all screens */
+  grid-template-columns: 1fr 1fr;
+  /* Reduced gap for more compact layout */
+  gap: 1rem;
+}
+
+.hobbies h3,
+.dislikes h3 {
+  /* Updated font styling to match reference */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.hobbies ul,
+.dislikes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* Reduced gap for more compact layout */
+  gap: 0.375rem;
+}
+
+/* Updated list item styling to match reference with background and border-left */
+.hobbies li,
+.dislikes li {
+  padding: 0.375rem 0.625rem;
+  background: #f7fafc;
+  border-radius: 0.375rem;
+  color: #4a5568;
+  border-left: 3px solid #667eea;
+  position: relative;
+  /* Reduced font size for more compact layout */
+  font-size: 0.875rem;
+}
+
+/* Removed bullet points */
+.hobbies li::before,
+.dislikes li::before {
+  display: none;
+}
+
+/* Added red border for dislikes */
+.dislikes li {
+  border-left-color: #f56565;
+}
+
+/* Responsive Design */
+/* Removed tablet breakpoint that changed grid columns */
+@media (min-width: 640px) {
+  /* Keeping 2 columns on all screen sizes */
+}
+
+/* Updated desktop breakpoint for horizontal layout */
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+  }
+
+  .main {
+    max-width: 900px;
+  }
+  .avatar-container {
+    flex-shrink: 0;
+    /* Reduced width for more compact layout */
+    width: 220px;
+    padding: 1.5rem;
+  }
+
+  .avatar {
+    /* Reduced avatar size for desktop */
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-content {
+    flex: 1;
+    /* Reduced padding for more compact layout */
+    padding: 1.5rem;
+  }
+
+  /* Removed display: none to show interests on all screens */
+  .interests {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-name {
+    /* Adjusted font size for better fit */
+    font-size: 1.75rem;
+  }
+
+  .user-bio {
+    font-size: 1rem;
+  }
+}
+
+/* Ensure text wrapping */
+.user-name,
+.user-bio,
+.hobbies li,
+.dislikes li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
