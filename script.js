@@ -9,7 +9,7 @@ function updateTime() {
 updateTime()
 
 // Update time every second
-setInterval(updateTime, 1000)
+setInterval(updateTime, 1000);
 
 // Add keyboard navigation enhancement for social links
 document.addEventListener("DOMContentLoaded", () => {
